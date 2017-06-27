@@ -22,8 +22,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/home', function(req, res, next) {
-  res.sendFile(path.join(__dirname, 'public/home.html'));
+app.get('/baseline', function(req, res, next) {
+  res.sendFile(path.join(__dirname, 'public/baseline.html'));
+});
+
+app.get('/visit1', function(req, res, next) {
+  res.sendFile(path.join(__dirname, 'public/visit1.html'));
+});
+
+app.get('/visit2', function(req, res, next) {
+  res.sendFile(path.join(__dirname, 'public/visit2.html'));
 });
 
 // catch 404 and forward to error handler
